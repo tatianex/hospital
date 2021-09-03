@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">projeto003</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="new_label">new</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="patients">Patients</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+</resources>

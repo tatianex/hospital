@@ -4,8 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.proway.projeto003.database.dao.DoctorDao
 
 import com.proway.projeto003.database.dao.PatientDao
+import com.proway.projeto003.database.dao.SpecialityDao
 
 import com.proway.projeto003.model.Patient
 
@@ -17,8 +19,8 @@ import com.proway.projeto003.model.Patient
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun patientDao(): PatientDao
-    //abstract fun specialityDao(): SpecialityDao
-    //abstract fun doctorDao(): DoctorDao
+    abstract fun specialityDao(): SpecialityDao
+    abstract fun doctorDao(): DoctorDao
 
     companion object {
 

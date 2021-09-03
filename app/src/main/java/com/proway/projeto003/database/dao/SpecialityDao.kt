@@ -1,25 +1,28 @@
-//package com.proway.projeto003.database.dao
-//
-//import androidx.room.*
-//import com.proway.projeto003.model.Speciality
-//Speciality
-////@Dao
-//interface SpecialityDao {
-//
-//    @Transaction
-//    @Query("SELECT * FROM Speciality")
-//    fun getSpecialities(): List<Speciality>
-//
-//    @Transaction
-//    @Query("SELECT * FROM Speciality WHERE speciality_id = :id")
-//    fun getById(id: Long): Speciality
-//
-//    @Insert
-//    fun insert(speciality: ArrayList<Speciality>)
-//
-//    @Delete
-//    fun delete(speciality: Speciality)
-//
-//    @Update
-//    fun update(speciality: Speciality)
-//}
+package com.proway.projeto003.database.dao
+
+import androidx.room.*
+import com.proway.projeto003.model.Speciality
+
+@Dao
+interface SpecialityDao {
+
+    @Transaction
+    @Query("SELECT * FROM Speciality ORDER BY speciality_name")
+    fun getSpecialities(): List<Speciality>
+
+    @Transaction
+    @Query("SELECT * FROM Speciality WHERE speciality_id = :id")
+    fun getSpecialityById(id: Long): Speciality
+
+    @Query("SELECT * FROM Speciality WHERE speciality_name like '%' || :name || '%'")
+    fun getSpecialityByName(name: String): List<Speciality>
+
+    @Insert
+    fun insert(speciality: ArrayList<Speciality>)
+
+    @Delete
+    fun delete(speciality: Speciality)
+
+    @Update
+    fun update(speciality: Speciality)
+}

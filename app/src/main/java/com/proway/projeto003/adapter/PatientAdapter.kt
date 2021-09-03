@@ -41,7 +41,7 @@ class PatientViewHolder(itemView: View, val onTap: (Patient) -> Unit): RecyclerV
     fun bind(patient: Patient) {
         //binding.idTextView.text = patient.id.toString()
         binding.nameTextView.text = patient.name
-        //binding.ageTextView.text = patient.age
+        //binding.ageTextView.text = patient.age.toString()
         //binding.genderTextView.text = patient.gender
         itemView.setOnClickListener { onTap(patient) }
     }

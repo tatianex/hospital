@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_pacients"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title="Patients" />
+
+    <item
+        android:id="@+id/nav_doctors"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title="Doctors" />
+
+    <item
+        android:id="@+id/nav_specialities"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title="Specialities" />
+
+    <item
+        android:id="@+id/nav_appointments"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title="Appointments" />
+</menu>

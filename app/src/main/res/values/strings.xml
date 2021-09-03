@@ -8,4 +8,5 @@
     <string name="patients">Patients</string>
     <string name="gender">Gender</string>
     <string name="age">Age</string>
+    <string name="speciality">Speciality</string>
 </resources>

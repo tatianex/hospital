@@ -2,6 +2,7 @@ package com.proway.projeto003.repository
 
 import com.proway.projeto003.database.dao.DoctorDao
 import com.proway.projeto003.model.Doctor
+import com.proway.projeto003.model.DoctorPojo
 import javax.inject.Inject
 
 class DoctorRepository @Inject constructor(private val doctorDao: DoctorDao){
@@ -11,7 +12,7 @@ class DoctorRepository @Inject constructor(private val doctorDao: DoctorDao){
         return doctorDao.insert(doctor)
     }
 
-    fun getDoctors(): List<Doctor> {
+    fun getDoctors(): List<DoctorPojo> {
         return doctorDao.getDoctors()
     }
 

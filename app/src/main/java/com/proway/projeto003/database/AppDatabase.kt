@@ -21,6 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun patientDao(): PatientDao
     abstract fun specialityDao(): SpecialityDao
     abstract fun doctorDao(): DoctorDao
+    // abstract fun schedulingDao(): SpecialityDao
 
     companion object {
 

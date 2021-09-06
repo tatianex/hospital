@@ -5,8 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.proway.projeto003.model.Doctor
 import com.proway.projeto003.repository.DoctorRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+@HiltViewModel
 class DoctorViewModel @Inject constructor(private val repository: DoctorRepository) : ViewModel() {
 
     private val _doctors = MutableLiveData<List<Doctor>>()

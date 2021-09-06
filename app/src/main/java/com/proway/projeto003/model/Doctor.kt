@@ -19,7 +19,7 @@ data class DoctorPojo(
     @Embedded
     val doctor: Doctor?,
     @Relation(
-        parentColumn = "specialityPk",
+        parentColumn = "doctor_speciality",
         entityColumn = "speciality_id"
     )
     val speciality: Speciality?

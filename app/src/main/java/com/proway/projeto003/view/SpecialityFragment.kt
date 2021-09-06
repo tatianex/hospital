@@ -12,7 +12,9 @@ import com.proway.projeto003.adapter.SpecialityAdapter
 import com.proway.projeto003.databinding.SpecialityFragmentBinding
 import com.proway.projeto003.model.Speciality
 import com.proway.projeto003.view_model.SpecialityViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SpecialityFragment : Fragment(R.layout.speciality_fragment) {
 
     companion object {

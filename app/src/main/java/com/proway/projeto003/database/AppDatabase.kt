@@ -8,12 +8,14 @@ import com.proway.projeto003.database.dao.DoctorDao
 
 import com.proway.projeto003.database.dao.PatientDao
 import com.proway.projeto003.database.dao.SpecialityDao
+import com.proway.projeto003.model.Doctor
 
 import com.proway.projeto003.model.Patient
+import com.proway.projeto003.model.Speciality
 
 
 @Database(
-    entities = [Patient::class],
+    entities = [Patient::class, Doctor::class, Speciality::class],
     version = 1
 )
 abstract class AppDatabase : RoomDatabase() {

@@ -6,7 +6,6 @@ import com.proway.projeto003.databinding.MainActivityBinding
 import com.proway.projeto003.utils.replaceFragment
 import com.proway.projeto003.view.DoctorFragment
 import com.proway.projeto003.view.PatientFragment
-import com.proway.projeto003.view.SchedulingFragment
 import com.proway.projeto003.view.SpecialityFragment
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,9 +35,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_specialities -> {
                     replaceFragment(fragment = SpecialityFragment.newInstance())
                 }
-                R.id.nav_appointments -> {
-                    replaceFragment(fragment = SchedulingFragment.newInstance())
-                }
+//                R.id.nav_appointments -> {
+//                    replaceFragment(fragment = SchedulingFragment.newInstance())
+//                }
             }
             true
         }

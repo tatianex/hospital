@@ -12,7 +12,9 @@ import com.proway.projeto003.adapter.DoctorAdapter
 import com.proway.projeto003.databinding.DoctorFragmentBinding
 import com.proway.projeto003.model.Doctor
 import com.proway.projeto003.view_model.DoctorViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DoctorFragment : Fragment(R.layout.doctor_fragment) {
 
     companion object {

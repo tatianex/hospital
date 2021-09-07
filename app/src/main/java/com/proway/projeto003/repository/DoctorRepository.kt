@@ -7,7 +7,6 @@ import javax.inject.Inject
 
 class DoctorRepository @Inject constructor(private val doctorDao: DoctorDao){
 
-
     fun insert(doctor: Doctor) {
         return doctorDao.insert(doctor)
     }

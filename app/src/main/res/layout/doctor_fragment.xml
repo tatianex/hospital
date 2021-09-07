@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:fontFamily="sans-serif-black"
-        android:text="DOCTORS"
+        android:text="@string/doctors"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,14 +69,11 @@
 
             <androidx.appcompat.widget.AppCompatAutoCompleteTextView
                 android:id="@+id/specialityAutoComplete"
+                style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="52dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
                 android:completionThreshold="1"/>
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,6 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
+                android:layout_marginEnd="6dp"
                 android:layout_weight="1"
                 android:text="@string/delete" />
 
@@ -120,7 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:fontFamily="sans-serif-black"
-        android:text="Doctors"
+        android:text="@string/doctors"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

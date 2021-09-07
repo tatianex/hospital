@@ -5,6 +5,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="marquee"
+        android:layout_gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         android:fontFamily="sans-serif"
         android:gravity="center_vertical"
         android:textSize="14sp" />

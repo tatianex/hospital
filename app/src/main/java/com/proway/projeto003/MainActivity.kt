@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         settingInitialFragment()
     }
 
-    fun settingBottomBar() {
+    private fun settingBottomBar() {
         binding.bottomBarNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
 

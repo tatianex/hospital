@@ -1,62 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
-        android:layout_margin="12dp"
-        android:elevation="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="20dp"
-            android:padding="12dp">
+            android:layout_height="120dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
-                android:id="@+id/idTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="123"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/nameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Maria"/>
+                <TextView
+                    android:id="@+id/idTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="123" />
 
-            <TextView
-                android:id="@+id/ageTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="20"/>
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif"
+                    app:layout_constraintEnd_toStartOf="@id/avatarImageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/idTextView"
+                    tools:text="Maria"
+                    tools:ignore="NotSibling" />
 
-            <TextView
-                android:id="@+id/genderTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Female"/>
+                <TextView
+                    android:id="@+id/ageTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif"
+                    app:layout_constraintEnd_toStartOf="@id/avatarImageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nameTextView"
+                    tools:text="20"
+                    tools:ignore="NotSibling" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/genderTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif"
+                    app:layout_constraintEnd_toStartOf="@id/avatarImageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ageTextView"
+                    tools:text="Female"
+                    tools:ignore="NotSibling" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
 
         <ImageView
+            android:id="@+id/avatarImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
             android:padding="8dp"
-            android:src="@drawable/ic_launcher_background"/>
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/patient_avatar" />
 
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

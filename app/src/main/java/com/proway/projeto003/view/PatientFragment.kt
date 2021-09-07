@@ -40,9 +40,9 @@ class PatientFragment : Fragment(R.layout.patient_fragment) {
     }
 
     private fun setValueToField(it: Patient) {
-        binding.nameEditText?.setText(it.name)
-        binding.ageEditText?.setText(it.age)
-        binding.genderEditText?.setText(it.gender)
+        binding.nameEditText.setText(it.name)
+        binding.ageEditText.setText(it.age)
+        binding.genderEditText.setText(it.gender)
     }
 
     private val observerPatient = Observer<List<Patient>> {

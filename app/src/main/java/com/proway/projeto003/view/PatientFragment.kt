@@ -33,13 +33,13 @@ class PatientFragment : Fragment(R.layout.patient_fragment) {
 
     private lateinit var recyclerView: RecyclerView
 
-    private val adapter = PatientAdapter() {
+    private val adapter = PatientAdapter {
         selectedPatient = it
         binding.newButton.visibility = GONE
-        setValueToField(it)
+        setValueToFields(it)
     }
 
-    private fun setValueToField(it: Patient) {
+    private fun setValueToFields(it: Patient) {
         binding.nameEditText.setText(it.name)
         binding.ageEditText.setText(it.age)
         binding.genderEditText.setText(it.gender)
@@ -68,7 +68,13 @@ class PatientFragment : Fragment(R.layout.patient_fragment) {
             val age = binding.ageEditText.text
 
             if (name.toString().isNotEmpty() && gender.toString().isNotEmpty() && age.toString().isNotEmpty()) {
-                viewModel.insertPatient(Patient(name = name.toString(), gender = toString(), age = age.toString().toInt()))
+                viewModel.insertPatient(
+                    Patient(
+                        name = name.toString(),
+                        gender = gender.toString(),
+                        age = age.toString().toInt()
+                    )
+                )
                 clearAllFields()
             }
         }

@@ -41,7 +41,7 @@ class PatientFragment : Fragment(R.layout.patient_fragment) {
 
     private fun setValueToFields(it: Patient) {
         binding.nameEditText.setText(it.name)
-        binding.ageEditText.setText(it.age)
+        binding.ageEditText.setText(it.age.toString())
         binding.genderEditText.setText(it.gender)
     }
 

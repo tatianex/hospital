@@ -20,8 +20,11 @@ class SpecialityAdapter(val onTap: (Speciality) -> Unit): RecyclerView.Adapter<S
     }
 
     override fun onBindViewHolder(holder: SpecialityViewHolder, position: Int) {
-        listOfSpecialities[position].let {
-            holder.bind(it)
+        listOfSpecialities[position].apply {
+            holder.bind(this)
+            holder.itemView.setOnClickListener {
+                onTap(this)
+            }
         }
     }
 
@@ -42,6 +45,5 @@ class SpecialityViewHolder(itemView: View, val onTap: (Speciality) -> Unit) : Re
     fun bind (speciality: Speciality) {
         binding.idTextView.text = speciality.id.toString()
         binding.nameTextView.text = speciality.name
-        itemView.setOnClickListener { onTap(speciality) }
     }
 }

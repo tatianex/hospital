@@ -67,11 +67,11 @@
             android:layout_marginTop="12dp"
             android:hint="@string/speciality">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/specialityEditText"
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/specialityAutoComplete"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="wrap_content"
+                android:completionThreshold="1"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 

@@ -59,6 +59,7 @@ class DoctorFragment : Fragment(R.layout.doctor_fragment) {
         createNewDoctor()
         editDoctor()
         deleteDoctor()
+        autoCompleteField()
     }
 
     private fun startViewModel() {

@@ -17,12 +17,13 @@ interface SpecialityDao {
     @Query("SELECT * FROM Speciality WHERE speciality_name like '%' || :name || '%'")
     fun getSpecialityByName(name: String): List<Speciality>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(speciality: ArrayList<Speciality>)
 
     @Delete
     fun delete(speciality: Speciality)
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.REPLACE)
     fun update(speciality: Speciality)
+
 }

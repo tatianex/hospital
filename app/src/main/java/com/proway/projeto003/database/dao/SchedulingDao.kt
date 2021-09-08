@@ -39,5 +39,5 @@
 //    fun update(scheduling: Scheduling)
 //
 //    @Insert(onConflict = ABORT)
-//    fun insert(list: List<Scheduling>)
+//    fun insert(scheduling: Scheduling)
 //}

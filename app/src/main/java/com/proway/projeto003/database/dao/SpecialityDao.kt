@@ -12,7 +12,7 @@ interface SpecialityDao {
 
     @Transaction
     @Query("SELECT * FROM Speciality WHERE speciality_id = :id")
-    fun getSpecialityById(id: Long): Speciality
+    fun getSpecialityById(id: Int): Speciality
 
     @Query("SELECT * FROM Speciality WHERE speciality_name like '%' || :name || '%'")
     fun getSpecialityByName(name: String): List<Speciality>

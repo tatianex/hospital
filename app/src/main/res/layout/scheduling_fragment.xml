@@ -1,8 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.SchedulingFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    tools:context=".view.SchedulingFragment"-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/filterSpecialityTextInput"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginEnd="12dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:boxStrokeWidthFocused="1dp">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/specialityfilterEditTextFilter"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:hint="Speciality"/>-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/genderTextInput"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginEnd="12dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/filterSpecialityTextInput"-->
+<!--        app:boxStrokeWidthFocused="1dp">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/genderEditTextFilter"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:hint="Gender"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/patientInput"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginEnd="12dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/genderTextInput"-->
+<!--        app:boxStrokeWidthFocused="1dp">-->
+
+<!--        <AutoCompleteTextView-->
+<!--            android:id="@+id/autoCompletePatient"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Patient"-->
+<!--            android:completionThreshold="1"-->
+<!--            tools:ignore="LabelFor"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/doctorInput"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginEnd="12dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/genderTextInput"-->
+<!--        app:boxStrokeWidthFocused="1dp">-->
+
+<!--        <AutoCompleteTextView-->
+<!--            android:id="@+id/autoCompleteDoctor"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Patient"-->
+<!--            android:completionThreshold="1"-->
+<!--            tools:ignore="LabelFor"/>-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/doctorInput">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/insertSheduleButton"-->
+<!--            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="12dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Insert Patient"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/showScheduleListButton"-->
+<!--            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="12dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="List Patients"/>-->
+
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:background="@color/blue2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/schedulingRecyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:visibility="invisible"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/linearLayout"-->
+<!--        tools:listitem="Item"/>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
